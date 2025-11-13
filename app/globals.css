@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Croatian Adriatic theme with deep blues and teal accents */
+    --background: 210 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 210 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 25% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 192 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 20% 18%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 185 80% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 22%;
+    --input: 210 20% 22%;
+    --ring: 192 85% 45%;
+    --radius: 0.5rem;
+    --foreground-rgb: 250, 250, 250;
+    --background-start-rgb: 12, 17, 26;
+    --background-end-rgb: 8, 12, 20;
+    --primary-rgb: 25, 160, 185;
+    --secondary-rgb: 35, 45, 60;
+    --accent-rgb: 30, 190, 205;
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 210 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 25% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 192 85% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 20% 18%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 185 80% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 22%;
+    --input: 210 20% 22%;
+    --ring: 192 85% 45%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    /* Deep blue gradient background for Croatian Adriatic theme */
+    background: linear-gradient(180deg, rgb(12, 17, 26) 0%, rgb(8, 12, 20) 100%);
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Updated casino card styles for Croatian Adriatic theme */
+.casino-card {
+  background-color: rgb(35, 45, 60);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 0.4);
+  transition: all 0.3s;
+  border: 1px solid rgb(50, 65, 80);
+}
+
+.casino-card:hover {
+  box-shadow: 0 4px 12px -1px rgb(25 160 185 / 0.4);
+  border-color: rgb(25, 160, 185);
+}
+
+.casino-card-featured {
+  background-color: rgb(35, 45, 60);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px -1px rgb(25 160 185 / 0.3);
+  transition: all 0.3s;
+  border: 1px solid rgb(25, 160, 185);
+}
+
+.casino-card-featured:hover {
+  box-shadow: 0 8px 20px -3px rgb(25 160 185 / 0.5);
+}
+
+/* Croatian teal primary button */
+.btn-primary {
+  background: linear-gradient(135deg, #19a0b9 0%, #1ebecf 100%);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #1590a5;
+  box-shadow: 0 2px 8px rgba(25, 160, 185, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1ebecf 0%, #2dd4e5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 190, 205, 0.6);
+}
+
+.btn-secondary {
+  background-color: rgb(50, 65, 80);
+  color: rgb(250, 250, 250);
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  border: 1px solid rgb(70, 85, 100);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-size: 0.875rem;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(60, 75, 90);
+  border-color: rgb(25, 160, 185);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  transition: all 0.2s;
+}
+
+/* Updated badges for Croatian theme */
+.badge-primary {
+  background-color: rgb(50, 65, 80);
+  color: rgb(250, 250, 250);
+  border: 1px solid rgb(70, 85, 100);
+}
+
+.badge-secondary {
+  background-color: rgb(40, 55, 70);
+  color: rgb(190, 190, 190);
+  border: 1px solid rgb(60, 75, 90);
+}
+
+.rating-stars {
+  display: flex;
+  color: rgb(25, 160, 185);
+}
+
+.top-casino-glow {
+  position: relative;
+}
+
+.top-casino-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(to right, rgb(25, 160, 185), rgb(30, 190, 205), rgb(25, 160, 185));
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.top-casino-glow:hover::before {
+  opacity: 1;
+}
+
+.top-casino-glow > * {
+  position: relative;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: rgb(25, 160, 185);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(25, 160, 185);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.top-badge {
+  transition: all 0.2s;
+}
+
+.info-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px -1px rgba(25, 160, 185, 0.3);
+}
+
+.floating-btn {
+  transition: all 0.3s;
+}
+
+.floating-btn:hover {
+  box-shadow: 0 4px 12px -1px rgb(25 160 185 / 0.5);
+}
