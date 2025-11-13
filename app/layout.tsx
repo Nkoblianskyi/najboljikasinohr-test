@@ -19,10 +19,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Najbolji Online Casini u Hrvatskoj 2025 | najboljikasinohr.com",
+  title: "Najbolji Online Casini u Hrvatskoj 2025",
   description:
     "najboljikasinohr.com - Pronađite najbolje online casine u Hrvatskoj. Objektivne recenzije, ekskluzivni bonusi i pouzdane preporuke za hrvatske igrače.",
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
